@@ -1,4 +1,6 @@
+import { HttpEventType } from '@angular/common/http';
 import { TestBed } from '@angular/core/testing';
+import { Observable } from 'rxjs';
 
 import { RepositoriesStateService } from './repositories.state.service';
 
