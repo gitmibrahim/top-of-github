@@ -1,0 +1,82 @@
+.repo {
+  display: flex;
+  margin: 50px 50px 100px;
+  padding: 25px;
+  border: 1px solid #777;
+  border-radius: 5px;
+
+  .owner-avatar {
+    display: block;
+    max-width:230px;
+    max-height:150px;
+    width: auto;
+    height: auto;
+    border: 1px solid #999;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  .repo-details {
+    max-width: calc(100% - 160px);
+  }
+
+  .repo-name {
+    margin-top: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .repo-info {
+    font-size: .8rem;
+    .repo-stars,
+    .repo-issues {
+      margin-bottom: 0.5em;
+      margin-right: 5px;
+      border: 1px solid #777;
+      border-radius: 5px;
+      display: inline-flex;
+
+      .icon {
+        background-color: #e5ebf1;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        display: inline-flex;
+        align-items: center;
+        svg {
+          margin-right: 4px;
+        }
+      }
+      .icon,
+      .count {
+        padding: 3px 12px;
+      }
+    }
+    .repo-info {
+      margin-top: 0.8em;
+    }
+  }
+  time {
+    font-style: italic;
+  }
+}
+
+@media (max-width: 560px) {
+  .repo {
+    flex-flow: column;
+    text-align: center;
+    .owner-img-link {
+      align-self: center;
+      .owner-avatar {
+        margin: 0 0 25px;
+      }
+    }
+    .repo-details {
+      max-width: unset;
+    }
+    .repo-stars,
+    .repo-issues {
+      margin-right: 0;
+    }
+  }
+}

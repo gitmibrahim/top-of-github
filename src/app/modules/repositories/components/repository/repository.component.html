@@ -1,0 +1,38 @@
+<div class="repo" *ngIf="repo">
+  <a class="owner-img-link" rel="author" href="https://github.com/{{repo.owner.login}}" title="author's github username">
+    <img [src]="repo.owner.avatar_url" alt="author's github link" class="owner-avatar">
+  </a>
+  <div class="repo-details">
+    <h2 class="repo-name">
+      <a [href]="repo.html_url">{{ repo.name }}</a>
+    </h2>
+    <p class="repo-description">{{ repo.description }}</p>
+
+    <div class="repo-info">
+      <p class="repo-stars">
+        <span class="icon">
+          <svg class="star" height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z"></path></svg>
+          Stars
+        </span>
+        <span class="count">
+          {{ (repo.stargazers_count/1000).toFixed(1) + 'K' }}
+        </span>
+      </p>
+      <p class="repo-issues">
+        <span class="icon">
+          <svg height="16" viewBox="0 0 16 16" version="1.1" width="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm9 3a1 1 0 11-2 0 1 1 0 012 0zm-.25-6.25a.75.75 0 00-1.5 0v3.5a.75.75 0 001.5 0v-3.5z"></path></svg>
+          Issues
+        </span>
+        <span class="count">
+          {{ repo.open_issues_count }}
+        </span>
+      </p>
+      <p class="repo-log">Submitted
+        on <time pubdate [dateTime]="dateTime(repo.created_at)" [title]="dateTitle(repo.created_at)">{{ relativeDate(repo.created_at) }}</time>,
+        By <a rel="author" href="https://github.com/{{repo.owner.login}}" title="author's github link">
+          {{ repo.owner.login }}
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
