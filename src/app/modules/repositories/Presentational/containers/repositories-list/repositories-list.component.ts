@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, of } from 'rxjs';
-import { IRepository } from '../../models/repository';
-import { RepositoriesFacadeService } from '../../repositories.facade.service';
+import { Observable } from 'rxjs';
+import { IRepository } from '../../../Data/models/repository';
+import { RepositoriesFacadeService } from '../../../Facade/repositories.facade.service';
 
 @Component({
   selector: 'app-repositories-list',

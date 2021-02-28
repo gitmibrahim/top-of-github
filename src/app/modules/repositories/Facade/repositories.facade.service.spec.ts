@@ -1,9 +1,9 @@
 import { TestBed } from '@angular/core/testing';
 import { of } from 'rxjs';
-import { RepositoriesApiService } from './api/repositories.api.service';
+import { RepositoriesApiService } from 'top-of-github/src/app/modules/repositories/api/repositories.api.service';
 import { RepositoriesFacadeService } from './repositories.facade.service';
-import { RepositoriesStateService } from './state/repositories.state.service';
-import { TestHelp } from '../../shared/test-help/test-help';
+import { RepositoriesStateService } from 'top-of-github/src/app/modules/repositories/state/repositories.state.service';
+import { TestHelp } from '../../../shared/test-help/test-help';
 
 describe('RepositoriesFacadeService', () => {
   let service: RepositoriesFacadeService;
