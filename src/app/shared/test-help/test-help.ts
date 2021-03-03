@@ -1,5 +1,5 @@
 import { of } from "rxjs";
-import { IRepository } from "../../modules/repositories/Data/models/repository";
+import { IRepository } from "@repositories/Data/models/repository";
 
 export class TestHelp {
   repos: IRepository[] = []

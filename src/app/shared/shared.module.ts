@@ -13,6 +13,7 @@ import { BrowserModule } from '@angular/platform-browser';
   ],
   exports: [
     InfiniteScrollDirective,
+    BrowserModule
   ]
 })
 export class SharedModule { }

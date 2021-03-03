@@ -1,7 +1,7 @@
 import { Directive, Output, EventEmitter, ElementRef, HostListener } from '@angular/core';
 import { Observable, Subject, Subscription } from 'rxjs';
 import { debounceTime } from 'rxjs/operators';
-import { RepositoriesStateService } from '../../modules/repositories/Data/state/repositories.state.service';
+import { RepositoriesStateService } from '@repositories/Data/state/repositories.state.service';
 
 export interface Viewport {
   width: number;

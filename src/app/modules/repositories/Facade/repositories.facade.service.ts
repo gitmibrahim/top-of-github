@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { RepositoriesApiService } from '../Data/api/repositories.api.service';
-import { IRepository } from '../Data/models/repository';
-import { RepositoriesStateService } from '../Data/state/repositories.state.service';
+import { RepositoriesApiService } from '@repositories/Data/api/repositories.api.service';
+import { IRepository } from '@repositories/Data/models/repository';
+import { RepositoriesStateService } from '@repositories/Data/state/repositories.state.service';
 
 @Injectable({
   providedIn: 'root'
