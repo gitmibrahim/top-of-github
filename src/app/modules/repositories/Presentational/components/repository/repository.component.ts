@@ -1,10 +1,11 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { IRepository } from '@repositories/Data/models/repository';
 
 @Component({
   selector: 'app-repository',
   templateUrl: './repository.component.html',
-  styleUrls: ['./repository.component.scss']
+  styleUrls: ['./repository.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class RepositoryComponent implements OnInit {
   @Input() repo: IRepository;
